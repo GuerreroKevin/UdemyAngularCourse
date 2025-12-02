@@ -1,4 +1,5 @@
 import { Component, Input, numberAttribute } from '@angular/core';
+import { GeneroCreacionDTO } from '../../generos/generos';
 
 @Component({
   selector: 'app-editar-pelicula',
@@ -10,4 +11,8 @@ export class EditarPeliculaComponent {
 
   @Input({transform: numberAttribute})
   id!: number;
+
+  guardarCambios(genero: GeneroCreacionDTO){
+    console.log('Editando el genero', genero);
+  }
 }
